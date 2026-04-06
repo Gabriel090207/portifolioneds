@@ -202,8 +202,7 @@ function Projects() {
               if (offset < -total / 2) offset += total
 
               // 🔥 só renderiza os 3 principais
-if (isMobile && offset !== 0) return null
-if (Math.abs(offset) > 1) return null
+if (!isMobile && Math.abs(offset) > 1) return null
 
 return (
   <div
@@ -214,7 +213,8 @@ return (
 translateX(${isMobile ? offset * 100 + "%" : offset * 310 + "px"})
   scale(${offset === 0 ? 1 : 0.85})
 `,
-      opacity: offset === 0 ? 1 : 0.4,
+      opacity: isMobile ? (offset === 0 ? 1 : 0) : (offset === 0 ? 1 : 0.4),
+pointerEvents: isMobile ? (offset === 0 ? "auto" : "none") : "auto",
       zIndex: offset === 0 ? 2 : 1
     }}
   >
