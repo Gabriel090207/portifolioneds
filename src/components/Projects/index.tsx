@@ -7,7 +7,6 @@ import {
   FiX
 } from "react-icons/fi"
 
-const isMobile = window.innerWidth <= 600
 
 const projects = [
   {
