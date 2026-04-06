@@ -88,7 +88,7 @@
   display: flex;
   gap: 24px;
 
-  width: max-content;
+  width: fit-content; /* 🔥 ou remove completamente */
 
   animation: scroll 70s linear infinite;
 }
@@ -98,31 +98,30 @@
 /* ===== PHONE CARD ===== */
 .testimonial-phone {
   min-width: 280px;
-  width: 80vw; /* 🔥 adapta ao celular */
-  max-width: 330px;
+  width: 80vw;
+  max-width: 320px;
 
-  height: auto;
+  height: 600px;
   aspect-ratio: 9 / 16;
 
-  border-radius: 10px;
+  border-radius: 13px;
   padding: 6px;
 
   background: #0f172a;
   border: 1px solid var(--border);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  overflow: hidden;
   transition: 0.3s ease;
 }
+
 /* TELA */
 .testimonial-phone img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* 🔥 melhor para prints */
+  display: block;
+  object-fit: cover;
+  border-radius: 14px;
 }
-
 
 /* ===== ANIMAÇÃO ===== */
 @keyframes scroll {
