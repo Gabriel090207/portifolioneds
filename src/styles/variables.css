@@ -1,0 +1,54 @@
+/* =========================
+   🎯 TEMA CLARO
+========================= */
+:root {
+  /* CORES BASE (inspirado na sua logo) */
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --secondary: #06b6d4;
+
+  /* GRADIENTE */
+  --gradient-primary: linear-gradient(135deg, #2563eb, #06b6d4);
+
+  /* BACKGROUND */
+  --bg: #ffffff;
+  --bg-secondary: #f8fafc;
+
+  /* TEXTOS */
+  --text: #0f172a;
+  --text-light: #64748b;
+
+  /* BORDER */
+  --border: #e5e7eb;
+
+  /* SHADOW */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   🌙 TEMA ESCURO
+========================= */
+[data-theme="dark"] {
+  /* CORES BASE */
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --secondary: #22d3ee;
+
+  /* GRADIENTE */
+  --gradient-primary: linear-gradient(135deg, #3b82f6, #22d3ee);
+
+  /* BACKGROUND */
+  --bg: #0f172a;
+  --bg-secondary: #020617;
+
+  /* TEXTOS */
+  --text: #f1f5f9;
+  --text-light: #94a3b8;
+
+  /* BORDER */
+  --border: #1e293b;
+
+  /* SHADOW */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}

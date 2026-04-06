@@ -1,0 +1,78 @@
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+
+  width: 100%;
+
+}
+
+/* LINHA */
+.divider__line {
+  flex: 1;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary),
+    var(--secondary),
+    transparent
+  );
+
+  opacity: 0.6;
+
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+/* LOGO */
+.divider__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.2),
+    transparent
+  );
+
+  backdrop-filter: blur(10px);
+
+  /* glow externo */
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.25);
+}
+
+/* IMAGEM */
+.divider__logo img {
+  width: 40px;
+  object-fit: contain;
+
+  filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.7));
+}
+
+/* ✨ ANIMAÇÃO LEVE (opcional mas top) */
+.divider__logo {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,271 @@
+.about {
+  padding: 120px 122px;
+}
+
+.about__content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+/* ===== AVATAR ===== */
+.about__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about__avatar-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* glow */
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.25),
+    transparent 70%
+  );
+}
+
+/* imagem */
+.about__avatar-wrapper img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid var(--border);
+
+  transition: 0.4s;
+}
+
+/* hover leve */
+.about__avatar-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== TEXTO ===== */
+.about__text {
+  flex: 1;
+}
+
+/* título */
+.about__text h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.about__text h2 span {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* parágrafo */
+.about__text p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* ===== SKILLS ===== */
+.about__skills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.about__skills span {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+}
+
+
+
+.about__skills span svg {
+  font-size: 14px;
+}
+
+
+/* React */
+.about__skills span:nth-child(1) svg {
+  color: #61dafb;
+}
+
+/* TypeScript */
+.about__skills span:nth-child(2) svg {
+  color: #1a7ae1;
+}
+
+/* JavaScript */
+.about__skills span:nth-child(3) svg {
+  color: #f7df1e;
+}
+
+/* NoSQL / Database */
+.about__skills span:nth-child(4) svg {
+  color: #22c55e;
+}
+
+/* Python */
+.about__skills span:nth-child(5) svg {
+  color: #2f7ab7;
+}
+
+/* ===== BOTÕES ===== */
+.about__cta {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.about__cta a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 22px;
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+/* botão principal */
+.about__cta a:first-child {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+/* botão secundário */
+.about__cta .secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* hover */
+.about__cta a:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+  .about__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about__text {
+    text-align: center;
+  }
+
+  .about__cta {
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .about {
+    padding: 80px 20px;
+  }
+
+  .about__content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about__avatar-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about__avatar-wrapper img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about__text h2 {
+    font-size: 34px;
+  }
+
+  .about__text p {
+    font-size: 14px;
+
+  }
+
+  .about__skills {
+    justify-content: center;
+  }
+
+  .about__cta {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .about__cta a {
+    justify-content: center;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .about {
+    padding: 100px 40px;
+  }
+
+  .about__content {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .about__avatar-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+
+  .about__avatar-wrapper img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .about__text {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about__text h2 {
+    font-size: 36px;
+  }
+
+  .about__text p {
+    font-size: 15px;
+  }
+
+  .about__skills {
+    justify-content: center;
+  }
+
+  .about__cta {
+    justify-content: center;
+  }
+}
