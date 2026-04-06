@@ -27,22 +27,38 @@ function Navbar() {
     setMenuOpen(!menuOpen)
   }
 
+
+  function handleScroll(e: React.MouseEvent, id: string) {
+  e.preventDefault()
+
+  const target = document.querySelector(id)
+
+  if (target) {
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  }
+
+  setMenuOpen(false)
+}
+
   return (
     <>
       <header className="navbar">
         <div className="navbar__content">
 
-          <div className="navbar__logo" onClick={toggleMenu}>
+         <div className="navbar__logo" onClick={toggleMenu}>
             <img src={logo} alt="NEDS logo" />
             <span>NEDS</span>
           </div>
 
           <nav className="navbar__links">
-            <a href="#home">Início</a>
-            <a href="#services">Serviços</a>
-            <a href="#projects">Projetos</a>
-            <a href="#about">Sobre</a>
-            <a href="#contact">Contato</a>
+            <a href="#home" onClick={(e) => handleScroll(e, "#home")}>Início</a>
+<a href="#services" onClick={(e) => handleScroll(e, "#services")}>Serviços</a>
+<a href="#projects" onClick={(e) => handleScroll(e, "#projects")}>Projetos</a>
+<a href="#about" onClick={(e) => handleScroll(e, "#about")}>Sobre</a>
+<a href="#contact" onClick={(e) => handleScroll(e, "#contact")}>Contato</a>
           </nav>
 
           <div className="theme-switch" onClick={toggleTheme}>
@@ -64,12 +80,26 @@ function Navbar() {
 
       <div className={`sidebar ${menuOpen ? "open" : ""}`}>
         <nav className="sidebar__links">
-          <a href="#home" onClick={toggleMenu}>Início</a>
-          <a href="#services" onClick={toggleMenu}>Serviços</a>
-          <a href="#projects" onClick={toggleMenu}>Projetos</a>
-          <a href="#about" onClick={toggleMenu}>Sobre</a>
-          <a href="#contact" onClick={toggleMenu}>Contato</a>
-        </nav>
+  <a href="#home" onClick={(e) => handleScroll(e, "#home")}>
+    Início
+  </a>
+
+  <a href="#services" onClick={(e) => handleScroll(e, "#services")}>
+    Serviços
+  </a>
+
+  <a href="#projects" onClick={(e) => handleScroll(e, "#projects")}>
+    Projetos
+  </a>
+
+  <a href="#about" onClick={(e) => handleScroll(e, "#about")}>
+    Sobre
+  </a>
+
+  <a href="#contact" onClick={(e) => handleScroll(e, "#contact")}>
+    Contato
+  </a>
+</nav>
       </div>
     </>
   )

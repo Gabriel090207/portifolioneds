@@ -22,9 +22,7 @@ html, body {
 }
 
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 section {
   scroll-margin-top: 100px;
@@ -52,4 +50,28 @@ body {
   color: var(--text);
   font-family: 'Inter', sans-serif;
   transition: 0.3s;
+}
+
+
+/* animação base */
+.fadeUp {
+  opacity: 0;
+}
+
+/* quando ativar */
+.fadeUp.show {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* delays personalizados */
+.fadeUp.delay-1.show {
+  animation: fadeUp 1s ease forwards;
+}
+
+.fadeUp.delay-2.show {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.fadeUp.delay-3.show {
+  animation: fadeUp 1.4s ease forwards;
 }

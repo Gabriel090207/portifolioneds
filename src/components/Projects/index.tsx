@@ -177,7 +177,7 @@ function Projects() {
   <section id="projects" className="projects">
       <div className="projects__content">
 
-        <div className="projects__header">
+       <div className="projects__header fadeUp">
           <h2>
             Confira Alguns de <span>Nossos Projetos</span>
           </h2>
@@ -187,7 +187,7 @@ function Projects() {
           </p>
         </div>
 
-        <div className="carousel">
+       <div className="carousel fadeUp delay-1">
 
           <button className="nav left" onClick={prev}>
             <FiArrowLeft />
@@ -241,7 +241,7 @@ pointerEvents: isMobile ? (offset === 0 ? "auto" : "none") : "auto",
 
         </div>
 
-        <div className="projects__cta">
+       <div className="projects__cta fadeUp delay-2">
           <button onClick={() => setOpen(true)}>
             Ver detalhes
           </button>

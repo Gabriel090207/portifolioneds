@@ -150,4 +150,11 @@
     min-width: 280px;
     max-width: 280px;
   }
+
+
+  .testimonials__slider::before,
+.testimonials__slider::after {
+  width: 40px; /* 🔥 menor fade */
+  opacity: 0.6; /* 🔥 mais suave */
+}
 }

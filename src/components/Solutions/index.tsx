@@ -54,17 +54,18 @@ function Solutions() {
       <div className="solutions__content">
 
         {/* HEADER */}
-        <div className="solutions__header">
-          <h2>
-            O que podemos <span>criar para você</span>
-          </h2>
-          <p>
-            Soluções digitais modernas para transformar ideias em resultados reais.
-          </p>
-        </div>
+       <div className="solutions__header fadeUp">
+  <h2>
+    O que podemos <span>criar para você</span>
+  </h2>
+
+  <p>
+    Soluções digitais modernas para transformar ideias em resultados reais.
+  </p>
+</div>
 
         {/* GRID PREMIUM */}
-        <div className="solutions__grid">
+       <div className="solutions__grid fade-up fadeUp delay-2">
           {data.map((item, index) => (
             <div
               key={index}
@@ -78,7 +79,7 @@ function Solutions() {
         </div>
 
         {/* VISUAL DINÂMICO */}
-       <div className="solutions__preview">
+<div className="solutions__preview fadeUp delay-3">
   <div className="solutions__preview-image">
     <img src={data[active].image} alt={data[active].title} />
   </div>

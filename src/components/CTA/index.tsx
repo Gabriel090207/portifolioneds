@@ -80,15 +80,15 @@ function CTA() {
    <section id="contact" className="cta">
       <div className="cta__content">
 
-        <h2>
+        <h2 className="fadeUp">
           Vamos tirar sua ideia <span>do papel</span>
         </h2>
 
-        <p>
+       <p className="fadeUp delay-1">
           Me conte um pouco sobre seu projeto e eu entro em contato com você.
         </p>
 
-        <form className="cta__form" onSubmit={handleSubmit}>
+        <form className="cta__form fadeUp delay-2" onSubmit={handleSubmit}>
 
           <input type="text" placeholder="Nome do responsável" required />
           <input type="email" placeholder="Seu e-mail" required />
@@ -148,7 +148,11 @@ function CTA() {
 
         <div className="cta__divider">ou</div>
 
-        <a href="https://wa.me/55SEUNUMERO" target="_blank">
+       <a
+  href="https://wa.me/5516993996654"
+  target="_blank"
+  className="fadeUp delay-3"
+>
           <FaWhatsapp /> Falar direto no WhatsApp
         </a>
 

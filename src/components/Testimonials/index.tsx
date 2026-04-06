@@ -18,7 +18,7 @@ function Testimonials() {
       <div className="testimonials__content">
 
         {/* HEADER */}
-        <div className="testimonials__header">
+       <div className="testimonials__header fadeUp">
           <h2>
             O que nossos <span>clientes dizem</span>
           </h2>
@@ -28,7 +28,7 @@ function Testimonials() {
         </div>
 
         {/* SLIDER */}
-        <div className="testimonials__slider">
+       <div className="testimonials__slider fadeUp delay-1">
           <div className="testimonials__track">
 
             {[...testimonials, ...testimonials].map((img, index) => (

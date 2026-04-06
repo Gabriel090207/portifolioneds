@@ -11,14 +11,14 @@ function About() {
       <div className="about__content">
 
         {/* AVATAR */}
-        <div className="about__image">
+       <div className="about__image fadeUp">
           <div className="about__avatar-wrapper">
             <img src="/avatar.png" alt="Seu Avatar" />
           </div>
         </div>
 
         {/* TEXTO */}
-        <div className="about__text">
+       <div className="about__text fadeUp delay-1">
 
           <h2>
   Quem está por trás da <span>NEDS</span>
@@ -36,18 +36,18 @@ function About() {
 </p>
 
           {/* SKILLS */}
-          <div className="about__skills">
-           <div className="about__skills">
+        <div className="about__skills fadeUp delay-2">
+          
   <span><FaReact /> React</span>
   <span><SiTypescript /> TypeScript</span>
   <span><SiJavascript /> JavaScript</span>
   <span><FaDatabase /> NoSQL</span>
   <span><SiPython /> Python</span>
 </div>
-          </div>
+         
 
           {/* BOTÕES */}
-          <div className="about__cta">
+         <div className="about__cta fadeUp delay-3">
 
             <a href="https://instagram.com/_gabrielborela" target="_blank">
               <FaInstagram /> Instagram
