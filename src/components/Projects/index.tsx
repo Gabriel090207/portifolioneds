@@ -134,6 +134,8 @@ function Projects() {
   const [open, setOpen] = useState(false)
   const [closing, setClosing] = useState(false)
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600)
+
 
   const handleClose = () => {
   setClosing(true)
@@ -160,6 +162,17 @@ function Projects() {
       document.body.style.overflow = "auto"
     }
   }, [open])
+
+
+  useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 600)
+  }
+
+  window.addEventListener("resize", handleResize)
+
+  return () => window.removeEventListener("resize", handleResize)
+}, [])
 
   return (
   <section id="projects" className="projects">
@@ -190,7 +203,7 @@ function Projects() {
               if (offset < -total / 2) offset += total
 
               // 🔥 só renderiza os 3 principais
-if (window.innerWidth <= 600 && offset !== 0) return null
+if (isMobile && offset !== 0) return null
 if (Math.abs(offset) > 1) return null
 
 return (
@@ -199,7 +212,7 @@ return (
     className="card"
     style={{
      transform: `
-  translateX(${isMobile ? offset * 100 + "%" : offset * 310 + "px"})
+translateX(${isMobile ? offset * 100 + "%" : offset * 310 + "px"})
   scale(${offset === 0 ? 1 : 0.85})
 `,
       opacity: offset === 0 ? 1 : 0.4,
