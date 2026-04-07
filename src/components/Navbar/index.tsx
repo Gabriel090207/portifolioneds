@@ -4,16 +4,17 @@ import { FiMoon, FiSun } from "react-icons/fi"
 import { useState, useEffect } from "react"
 
 function Navbar() {
-  const [theme, setTheme] = useState("light")
+  const [theme, setTheme] = useState("dark")
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme")
-    if (savedTheme) {
-      setTheme(savedTheme)
-      document.documentElement.setAttribute("data-theme", savedTheme)
-    }
-  }, [])
+ useEffect(() => {
+  const savedTheme = localStorage.getItem("theme")
+
+  const initialTheme = savedTheme || "dark"
+
+  setTheme(initialTheme)
+  document.documentElement.setAttribute("data-theme", initialTheme)
+}, [])
 
   function toggleTheme() {
     const newTheme = theme === "light" ? "dark" : "light"

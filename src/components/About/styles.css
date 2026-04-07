@@ -20,8 +20,8 @@
 
 .about__avatar-wrapper {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 390px;
+  height: 390px;
   border-radius: 50%;
 
   display: flex;
@@ -34,20 +34,25 @@
     rgba(37, 99, 235, 0.25),
     transparent 70%
   );
+
+  overflow: hidden; /* 👈 mantém o corte no círculo */
 }
 
 /* imagem */
 .about__avatar-wrapper img {
-  width: 320px;
-  height: 320px;
+  width: 100%;  /* 👈 maior que o container */
+  height: 110%;
   border-radius: 50%;
   object-fit: cover;
 
   border: 2px solid var(--border);
 
   transition: 0.4s;
-}
 
+  transform: none; /* ❌ remove o scale */
+  
+  object-position: center 20%; /* 👈 ajusta o enquadramento */
+}
 /* hover leve */
 .about__avatar-wrapper:hover img {
   transform: scale(1.05);
@@ -131,7 +136,7 @@
 .about__cta {
   display: flex;
   gap: 14px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .about__cta a {
@@ -156,8 +161,11 @@
 
 /* botão secundário */
 .about__cta .secondary {
-  border: 1px solid var(--border);
-  color: var(--text);
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  border: none;
+
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
 }
 
 /* hover */

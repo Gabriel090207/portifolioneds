@@ -46,34 +46,44 @@ function CTA() {
 
     const objetivo = (form[index] as HTMLTextAreaElement).value
 
-    try {
-      const response = await fetch("http://127.0.0.1:8000/lead", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          nome,
-          email,
-          telefone,
-          tipo: tipo === "outro" ? outro : tipo,
-          escopo,
-          cores,
-          objetivo
-        })
-      })
+   try {
+  const mensagem = `
+*NOVO LEAD PELO SITE*
 
-      if (!response.ok) throw new Error()
+Nome: ${nome}
+Email: ${email}
+Telefone: ${telefone}
 
-      showToast("success", "Formulário enviado com sucesso!")
+Tipo de Projeto: ${tipo === "outro" ? outro : tipo}
 
-      form.reset()
-      setTipoProjeto("")
+Escopo:
+${escopo}
 
-    } catch (error) {
-      console.error(error)
-      showToast("error", "Erro ao enviar formulário")
-    }
+Cores da Marca:
+${cores || "Não informado"}
+
+Objetivo:
+${objetivo}
+`
+
+  const mensagemFormatada = encodeURIComponent(mensagem)
+
+  const numero = "5516993996654"
+
+  const url = `https://wa.me/${numero}?text=${mensagemFormatada}`
+
+  window.open(url, "_blank")
+
+  showToast("success", "Redirecionando para o WhatsApp...")
+
+  form.reset()
+  setTipoProjeto("")
+
+} catch (error) {
+  console.error(error)
+  showToast("error", "Erro ao gerar mensagem")
+}
+
   }
 
   return (
