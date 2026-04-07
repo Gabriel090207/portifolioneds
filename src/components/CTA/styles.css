@@ -181,11 +181,12 @@
 }
 
 .cta__content a:hover {
-  transform: translateY(-3px);
-  opacity:  2.9;
- 
-}
+  transform: translateY(-4px) scale(1.02);
 
+  box-shadow: 0 18px 40px rgba(37, 211, 102, 0.4);
+
+  filter: brightness(1.1);
+}
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .cta {
