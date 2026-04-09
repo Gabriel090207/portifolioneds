@@ -19,7 +19,7 @@ function Hero() {
 
   <div className="hero__buttons fadeUp delay-2 show">
     <a
-      href="https://wa.me/SEUNUMERO"
+      href="https://wa.me/5516993996654"
       target="_blank"
       className="btn-primary"
     >
